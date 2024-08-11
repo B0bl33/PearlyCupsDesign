@@ -1,0 +1,147 @@
+body {
+    background: url('backter.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 146, 244, 0.8); /* Blue tint with opacity */
+    z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+.container-fluid {
+    margin: 20px;
+    position: relative; /* Ensure the navbar is above the overlay */
+    z-index: 1;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 5px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-20px); /* Start above its final position */
+    animation: fadeInFall 2s forwards; /* Apply animation */
+    z-index: 2;
+}
+
+@keyframes fadeInFall {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    padding: 0 10px; /* Add padding to the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.navbar .nav-item {
+    margin: 0 10px; /* Add margin between nav items */
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding: 10px 20px; /* Increase padding for nav links */
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgb(141, 187, 243); /* Matching gradient color */
+    color: #000;
+}
+.navbar-brand img {
+    height: 50px;
+}
+
+.animated-title {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.animated-title span {
+    display: inline-block;
+    animation: jumpWave 1.5s ease-in-out infinite;
+}
+
+.animated-title span:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.animated-title span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes jumpWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.carousel-inner img {
+    height: 400px; /* Adjust image height to fit the screen */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-columns .card {
+    background: none;
+    border: solid white; /* Remove card border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+    height: 100%;
+}
+
+.review-card {
+    background: none !important;
+    border: solid white !important; /* White border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review-card .star-rating {
+    text-align: center;
+}
+
+
+.card-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.75rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-text {
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.star-rating {
+    font-size: 1.2rem;
+    color: gold;
+    text-align: left;
+}
+/* Media Query for screens smaller than 400px */
+@media (max-width: 400px) {
+    .animated-title {
+        font-size: 2rem;
+        
+    }
+}

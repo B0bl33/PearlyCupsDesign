@@ -1,0 +1,172 @@
+body {
+    background: url('backter.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 146, 244, 0.8); /* Blue tint with opacity */
+    z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+.container-fluid {
+    margin: 20px;
+    position: relative; /* Ensure the navbar is above the overlay */
+    z-index: 1;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 5px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-20px); /* Start above its final position */
+    animation: fadeInFall 2s forwards; /* Apply animation */
+    z-index: 2;
+}
+
+@keyframes fadeInFall {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    padding: 0 10px; /* Add padding to the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.navbar .nav-item {
+    margin: 0 10px; /* Add margin between nav items */
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding: 10px 20px; /* Increase padding for nav links */
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgb(141, 187, 243); /* Matching gradient color */
+    color: #000;
+}
+.navbar-brand img {
+    height: 50px;
+}
+.product-image {
+    margin-top: 20px; /* Add margin to push the image down */
+    max-width: 80%; /* Make the image smaller */
+    height: auto;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+
+.animated-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.animated-title span {
+    display: inline-block;
+    animation: jumpWave 1.5s ease-in-out infinite;
+}
+
+.animated-title span:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.animated-title span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes jumpWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+.product-description {
+    font-size: 1.25rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: justify;
+    
+    text-align: center;
+
+}
+
+.product-price {
+    font-size: 2rem;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Pacifico', cursive;
+    margin: 10px;
+    text-align: center;
+}
+
+div .btn-primary {
+    background-color: #d2e9ff;
+    color: #000;
+    border: solid white;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+div .btn-primary:hover {
+    background-color: #3b92f4;
+    border: solid white;
+    color: white;
+}
+.product-image {
+    width: 700px;
+}
+
+/* Media Query for screens smaller than 400px */
+@media (max-width: 930px) {
+    .product-description {
+        font-size: 1rem;
+    }
+    
+}

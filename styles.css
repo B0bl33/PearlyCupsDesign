@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(to right, #bbd6ff, #3b92f4);
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container-fluid {
+    margin: 20px;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 5px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(-20px); /* Start above its final position */
+    animation: fadeInFall 2s forwards; /* Apply animation */
+}
+
+@keyframes fadeInFall {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    padding: 0 10px; /* Add padding to the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-item {
+    margin: 0 10px; /* Add margin between nav items */
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding: 10px 20px; /* Increase padding for nav links */
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgb(141, 187, 243); /* Matching gradient color */
+    color: #000;
+}
+.navbar-brand img {
+    height: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('backter.png') no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    background: rgba(59, 146, 244, 0.6); /* Overlay color with opacity */
+}
+
+.hero-section .text-center {
+    /* background: rgba(0, 0, 0, 0.7);  Optional: Add a background overlay for better text visibility */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.hero-logo {
+    max-width: 450px; /* Adjust logo size */
+    width: 100%;
+    height: auto;
+}
+
+.hero-section h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section h3 span {
+    display: inline-block;
+    animation: jumpWave 1.5s ease-in-out infinite;
+}
+
+@keyframes jumpWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-section h3 span:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+.hero-section h3 span:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.hero-section .btn-primary {
+    background-color: #d2e9ff;
+    color: #000;
+    border: solid white;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #3b92f4;
+    border: solid white;
+    color: white;
+}
+/* Media Query for screens smaller than 400px */
+@media (max-width: 400px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h3 {
+        font-size: 1rem;
+    }
+
+    .navbar .nav-link {
+        padding: 5px 10px;
+    }
+
+    .hero-section .btn-primary {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+    .hero-logo {
+        max-width: 400px;
+    }
+}
+
+/* Media Query for larger screens */
+@media (min-width: 900px) {
+    .hero-section h1 {
+        font-size: 6.5rem; /* Increase h1 font size */
+    }
+
+    .hero-section h3 {
+        font-size: 3rem; /* Increase h3 font size */
+    }
+}
